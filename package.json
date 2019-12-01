@@ -1,15 +1,18 @@
 {
   "name": "vuex-store-subscriber",
   "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+  "main": "dist/vue-store-subscriber.common.js",
+  "unpkg": "dist/vue-store-subscriber.umd.min.js",
+  "types": "types/index.d.ts",
+  "repository": "https://github.com/borzenko/vue-store-subscriber.git",
+  "bugs": {
+    "url": "https://github.com/borzenko/vue-store-subscriber/issues"
   },
-  "dependencies": {
-    "core-js": "^3.4.3",
-    "vue": "^2.6.10"
+  "author": "borzenko <borzenkomihail@yahoo.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name vue-store-subscriber src/index.js",
+    "lint": "vue-cli-service lint"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
@@ -37,5 +40,8 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "uuid": "^3.3.3"
+  }
 }
